@@ -19,7 +19,7 @@ def main():
 
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv("C:\\Users\\DELL PC\\Music\\Blood_donation_prediction\\transfusion\\transfusion.data")
+        data = pd.read_csv("transfusion.data")
         labelencoder=LabelEncoder()
         for col in data.columns:
             data[col] = labelencoder.fit_transform(data[col])
